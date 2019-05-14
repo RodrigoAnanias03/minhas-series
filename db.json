@@ -1,21 +1,10 @@
 {
   "series": [
     {
-      "id": 1,
-      "name": "How I met your mother",
-      "status": "watched",
-      "genre": "Comédia",
-      "comments": "Muito bom"
-    },
-    {
       "id": 2,
       "name": "Friends",
       "status": "watching",
       "genre": "Comédia",
-      "current": {
-        "episode": "01",
-        "season": "09"
-      },
       "comments": "Bom para descontrair"
     },
     {
@@ -24,48 +13,6 @@
       "status": "watched",
       "genre": "Drama",
       "comments": "Say My Name - melhor cena"
-    },
-    {
-      "id": 4,
-      "name": "Better Call Saul",
-      "status": "toWatch",
-      "genre": "Drama",
-      "comments": "Galera fala bem"
-    },
-    {
-      "name": "Teste",
-      "status": "watched",
-      "genre": "Comédia",
-      "comments": "teste",
-      "id": 5
-    },
-    {
-      "name": "rodrigho",
-      "status": "watched",
-      "genre": "Comédia",
-      "comments": "ertert",
-      "id": 6
-    },
-    {
-      "name": "sdsdf",
-      "status": "watched",
-      "genre": "Comédia",
-      "comments": "sdfsdf",
-      "id": 7
-    },
-    {
-      "name": "Avangers",
-      "status": "watched",
-      "genre": "Ação",
-      "comments": "muito bom",
-      "id": 8
-    },
-    {
-      "name": "",
-      "status": "watched",
-      "genre": "Comédia",
-      "comments": "",
-      "id": 9
     }
   ],
   "genres": [
