@@ -1,34 +1,22 @@
 import React, { Component } from 'react'
-import axios from 'axios'
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
 
-import api from './Api'
+
+import Home from './Home'
+import Series from './Series'
+import NewSeries from './NewSeries'
+
+const About = () => <section className="intro-section"><h1>Sobre</h1></section>
 
 class App extends Component{
-  constructor(props){
-    super(props)
 
-    this.state = {
-      genres: [],
-      isLoading: false
-    }
-  }
-  componentDidMount(){
-    this.setState({isLoading: true })
-    api.loadGenres()
-    .then((res)=>{
-      this.setState({
-        isLoading:false,
-        genres: res.data
-      })
-    })
-  }
-  renderGenereLink(genre){
-    return (
-      <span>&nbsp;<a href=''>{genre}</a>&nbsp;</span>
-    )
-  }
   render () {
     return (
+      <Router>
       <div>
       <nav className="navbar navbar-default navbar-fixed-top" role="navigation">
         <div className="container">
@@ -41,40 +29,25 @@ class App extends Component{
           <div className="collapse navbar-collapse navbar-ex1-collapse">
             <ul className="nav navbar-nav">
               <li>
-                <a href="">Menu item {this.state.count}</a>
+                <Link to='/'>Home </Link>
+              </li>
+              <li>
+                <Link to='/new'>Nova Série </Link>
+              </li>
+              <li>
+                <Link to='/about'>Sobre </Link>
               </li>
             </ul>
           </div>
     
         </div>
       </nav>
-    
-    
-      <section id="intro" className="intro-section">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <h1><img src="images/logo.png" /></h1>
-              <p>Nunca mais esqueça uma série que você assistiu ou que alguém lhe indicou.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-        <section>
-          {
-            this.state.isLoading &&
-            <span>Aguarde, carregando...</span>
-          }
-          {
-            !this.state.isLoading &&
-            <div>
-              Ver séries do genero: 
-              {this.state.genres.map(this.renderGenereLink)}
-            </div>
-          }
-        </section>
+      <Route exact path='/' component={Home} />
+      <Route exact path='/series/:genre' component={Series} />      
+      <Route exact path='/new' component={NewSeries} />
+      <Route exact path='/about' component={About} />
       </div>
+      </Router>
       )
     }
   }
