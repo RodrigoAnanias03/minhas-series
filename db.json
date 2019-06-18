@@ -13,6 +13,27 @@
       "status": "watched",
       "genre": "Drama",
       "comments": "Say My Name - melhor cena"
+    },
+    {
+      "name": "The Sopranos",
+      "status": "toWatch",
+      "genre": "Drama",
+      "comments": "Foda",
+      "id": 4
+    },
+    {
+      "name": "The Big Bang Theory",
+      "status": "watched",
+      "genre": "Comédia",
+      "comments": "Sheldon",
+      "id": 5
+    },
+    {
+      "name": "How I Met Yout Mother",
+      "status": "watched",
+      "genre": "Comédia",
+      "comments": "Wait for...",
+      "id": 6
     }
   ],
   "genres": [
